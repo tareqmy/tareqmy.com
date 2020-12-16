@@ -1,7 +1,7 @@
 version: '2'
 services:
   tareqmyweb:
-    image: tareqmyweb:latest
+    image: tareqmy/portfolio:latest
     # build: .
     hostname: tareqmyweb
     container_name: tareqmyweb

@@ -1,4 +1,4 @@
 docker rm -f tareqmyweb
-docker rmi tareqmyweb:latest
-docker build -t tareqmyweb:latest .
+docker rmi tareqmy/portfolio:latest
+docker build -t tareqmy/portfolio:latest .
 docker-compose up -d
