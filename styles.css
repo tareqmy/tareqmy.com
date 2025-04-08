@@ -1,25 +1,65 @@
 body {
-    margin: auto;
-    font: 32px "Optima", "Georgia", "Times New Roman";
-    background: white;
-}
-
-hr {
-    background-color: gainsboro;
-    border-color: gainsboro;
-    color: gainsboro;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    margin: auto;
-    width: 640px;
-    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-.title {
-    font-size: 36px;
+.profile-box {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: Noteworthy, serif;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
 .subtitle {
-    font-size: 24px;
+    font-size: 1.3rem;
+    font-family: Marhey, serif;
+    margin: 15px 0;
+    color: #666;
+}
+
+.links-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.links-list li {
+    margin: 10px 0;
+    font-size: 1rem;
+    font-family: Monaco, monospace;
+}
+
+.links-list a {
+    color: #0077cc;
+    text-decoration: none;
+    margin-left: 6px;
+    transition: color 0.2s;
+}
+
+.links-list a:hover {
+    color: #005fa3;
 }
