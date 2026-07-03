@@ -462,6 +462,108 @@ h1.name {
     color: var(--text-muted);
 }
 
+/* Projects Grid & Cards styling */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--badge-card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-1);
+    background: var(--card-bg-hover);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.project-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: var(--icon-circle-bg);
+    border: 1px solid var(--icon-circle-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--accent-1);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+    background: var(--accent-1);
+    color: #ffffff;
+    border-color: var(--accent-1);
+}
+
+.project-title-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.project-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.project-type {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent-2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-1);
+    gap: 6px;
+    margin-top: auto;
+}
+
+.project-footer i {
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover .project-footer i {
+    transform: translateX(3px);
+}
+
 /* Links & Social Matrix Section */
 .links-grid {
     display: grid;
