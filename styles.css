@@ -78,11 +78,17 @@ html[data-theme="light"] {
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: var(--bg-base);
     color: var(--text-secondary);
     min-height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,11 +98,20 @@ body {
 }
 
 /* Ambient Radial Glows (Rich Aesthetics) */
+.glow-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
 .ambient-glow {
     position: absolute;
     border-radius: 50%;
     filter: blur(100px);
-    z-index: 1;
     pointer-events: none;
 }
 .glow-1 {
@@ -175,8 +190,18 @@ html[data-theme="dark"] #theme-toggle .fa-sun { display: inline-block; }
 }
 
 @media (max-width: 900px) {
+    body {
+        padding: 30px 16px;
+    }
+    
     .dashboard-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .profile-column {
+        position: static;
+        top: auto;
     }
 }
 
@@ -678,8 +703,65 @@ html[data-theme="dark"] .social-card.github:hover .icon-circle { color: #000; }
 }
 
 @media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+    
+    .glass-panel {
+        padding: 20px 16px;
+        border-radius: 18px;
+    }
+    
+    .theme-toggle-container {
+        margin-bottom: 16px;
+    }
+    
+    h1.name {
+        font-size: 1.8rem;
+    }
+    
+    .credentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .credential-card {
+        padding: 12px 8px;
+        border-radius: 12px;
+    }
+    
+    .badge-img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 8px;
+    }
+    
+    .badge-name {
+        font-size: 0.8rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .project-card {
+        padding: 16px;
+        border-radius: 14px;
+    }
+    
+    .links-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .social-card {
+        padding: 12px 16px;
+    }
+    
     .contact-section-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
     }
 }
 
