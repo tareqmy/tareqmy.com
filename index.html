@@ -1,69 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tareq's Home</title>
-
-    <!-- Font & Icons -->
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Tareq Mohammad Yousuf | Portfolio & 4x AWS Certified Architect</title>
+    <meta name="description" content="Tareq Mohammad Yousuf - Developer, Team Lead, DevOps, Architect & 4x AWS Certified Professional. View badges, credentials, and social profiles." />
+    <meta name="keywords" content="Tareq Mohammad Yousuf, Developer, Team Lead, DevOps, Architect, AWS Certified, Solutions Architect, SysOps, Developer Associate, Cloud Practitioner" />
+    <meta name="author" content="Tareq Mohammad Yousuf" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tareq Mohammad Yousuf | Portfolio & 4x AWS Certified Architect" />
+    <meta property="og:description" content="Developer, Team Lead, DevOps, Architect & 4x AWS Certified Professional." />
+    <meta property="og:image" content="https://www.gravatar.com/avatar/2f504664e5be99b5b3952c462d83af0d?s=400" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Tareq Mohammad Yousuf | Portfolio & 4x AWS Certified Architect" />
+    <meta property="twitter:description" content="Developer, Team Lead, DevOps, Architect & 4x AWS Certified Professional." />
+    
+    <!-- Icons & Favicon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="shortcut icon" href="coding.png" />
     <link rel="stylesheet" href="styles.css" />
-
-    <!-- Optional Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<div class="container mt-5">
-    <div class="profile-box">
-        <h1>
-            <img src="https://www.gravatar.com/avatar/2f504664e5be99b5b3952c462d83af0d" class="avatar" />
-            Tareq Mohammad Yousuf
-        </h1>
-        <hr />
-        <p class="subtitle">
-            <i class="fas fa-info-circle"></i> Developer | Team Lead | DevOps | Architect | 4x AWS Certified
-        </p>
+    <!-- Ambient Background Glows -->
+    <div class="ambient-glow glow-1" id="glow-mesh-1"></div>
+    <div class="ambient-glow glow-2" id="glow-mesh-2"></div>
 
-        <ul class="links-list">
-            <li>
-                <i class="fab fa-linkedin"></i>
-                <a href="https://linkedin.com/in/tareqmy/">https://linkedin.com/in/tareqmy</a>
-            </li>
-            <li>
-                <i class="fab fa-aws"></i>
-                <a href="https://credly.com/users/tareqmy">https://credly.com/users/tareqmy</a>
-            </li>
-            <li>
-                <i class="fas fa-ranking-star"></i>
-                <a href="https://profile.codersrank.io/user/tareqmy/">https://codersrank.io/user/tareqmy</a>
-            </li>
-            <li>
-                <i class="fas fa-brain"></i>
-                <a href="https://brght.org/profile/tareq-mohammad-yousuf/">https://brght.org/profile/tareq-mohammad-yousuf/</a>
-            </li>
-            <li>
-                <i class="fab fa-bitbucket"></i>
-                <a href="https://bitbucket.org/tareqmy/">https://bitbucket.org/tareqmy</a>
-            </li>
-            <li>
-                <i class="fab fa-github"></i>
-                <a href="https://github.com/tareqmy/">https://github.com/tareqmy</a>
-            </li>
-            <li>
-                <i class="fas fa-download"></i>
-                <a href="/resume_tareq_mohammad_yousuf.pdf" download>download resume (PDF)</a>
-            </li>
-            <li>
-                <i class="fas fa-at"></i>
-                <a href="mailto:tareq.y@gmail.com">tareq.y@gmail.com</a>
-            </li>
-            <li>
-                <i class="fas fa-phone"></i> +8801713309963
-            </li>
-        </ul>
+    <div class="container">
+        <!-- Header Actions -->
+        <header class="theme-toggle-container">
+            <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <main class="dashboard-grid">
+            <!-- Left Column: Profile Card -->
+            <section class="profile-column glass-panel">
+                <div class="avatar-container">
+                    <div class="avatar-ring"></div>
+                    <img src="https://www.gravatar.com/avatar/2f504664e5be99b5b3952c462d83af0d?s=240" alt="Tareq Mohammad Yousuf Avatar" class="avatar" />
+                    <div class="status-badge" title="Active & Available"></div>
+                </div>
+                
+                <h1 class="name">
+                    <span class="gradient-text">Tareq Mohammad</span><br>Yousuf
+                </h1>
+                
+                <p class="subtitle">Developer | Team Lead | DevOps | Architect</p>
+                
+                <div class="roles-container">
+                    <span class="role-tag"><i class="fas fa-code"></i> Developer</span>
+                    <span class="role-tag"><i class="fas fa-users"></i> Team Lead</span>
+                    <span class="role-tag"><i class="fas fa-terminal"></i> DevOps</span>
+                    <span class="role-tag"><i class="fas fa-cubes"></i> Architect</span>
+                    <span class="role-tag"><i class="fab fa-aws"></i> 4x AWS Certified</span>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="actions-container">
+                    <a href="resume_tareq_mohammad_yousuf.pdf" class="btn btn-primary" download id="download-resume-btn">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <button class="btn btn-secondary" data-copy="tareq.y@gmail.com" data-copy-label="Email copied to clipboard!" id="copy-email-btn">
+                        <i class="far fa-copy"></i> Copy Email address
+                    </button>
+                </div>
+            </section>
+
+            <!-- Right Column: Interactive Content Sections -->
+            <div class="content-column">
+                
+                <!-- AWS Certifications Grid -->
+                <section class="glass-panel" id="aws-certifications-section">
+                    <h2 class="section-title">
+                        <i class="fab fa-aws"></i> AWS Certifications
+                    </h2>
+                    
+                    <div class="credentials-grid">
+                        <a href="https://credly.com/users/tareqmy" target="_blank" rel="noopener" class="credential-card" id="cert-solutions-architect">
+                            <img src="aws-certified-solutions-architect-associate.png" alt="AWS Certified Solutions Architect – Associate" class="badge-img" />
+                            <h3 class="badge-name">Solutions Architect</h3>
+                            <span class="badge-issuer">Associate</span>
+                        </a>
+                        
+                        <a href="https://credly.com/users/tareqmy" target="_blank" rel="noopener" class="credential-card" id="cert-sysops-admin">
+                            <img src="aws-certified-sysops-administrator-associate.png" alt="AWS Certified SysOps Administrator – Associate" class="badge-img" />
+                            <h3 class="badge-name">SysOps Administrator</h3>
+                            <span class="badge-issuer">Associate</span>
+                        </a>
+                        
+                        <a href="https://credly.com/users/tareqmy" target="_blank" rel="noopener" class="credential-card" id="cert-developer-associate">
+                            <img src="aws-certified-developer-associate.png" alt="AWS Certified Developer – Associate" class="badge-img" />
+                            <h3 class="badge-name">Developer</h3>
+                            <span class="badge-issuer">Associate</span>
+                        </a>
+                        
+                        <a href="https://credly.com/users/tareqmy" target="_blank" rel="noopener" class="credential-card" id="cert-cloud-practitioner">
+                            <img src="aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner" class="badge-img" />
+                            <h3 class="badge-name">Cloud Practitioner</h3>
+                            <span class="badge-issuer">Foundational</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Professional Network Links -->
+                <section class="glass-panel" id="professional-networks-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-network-wired"></i> Professional Profiles
+                    </h2>
+                    
+                    <div class="links-grid">
+                        <a href="https://linkedin.com/in/tareqmy/" target="_blank" rel="noopener" class="social-card linkedin" id="link-linkedin">
+                            <div class="icon-circle">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="social-info">
+                                <span class="social-title">LinkedIn</span>
+                                <span class="social-subtitle">Connect professionally</span>
+                            </div>
+                            <i class="fas fa-chevron-right arrow-icon"></i>
+                        </a>
+
+                        <a href="https://credly.com/users/tareqmy" target="_blank" rel="noopener" class="social-card credly" id="link-credly">
+                            <div class="icon-circle">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="social-info">
+                                <span class="social-title">Credly Badges</span>
+                                <span class="social-subtitle">Verify AWS credentials</span>
+                            </div>
+                            <i class="fas fa-chevron-right arrow-icon"></i>
+                        </a>
+
+                        <a href="https://profile.codersrank.io/user/tareqmy/" target="_blank" rel="noopener" class="social-card codersrank" id="link-codersrank">
+                            <div class="icon-circle">
+                                <i class="fas fa-ranking-star"></i>
+                            </div>
+                            <div class="social-info">
+                                <span class="social-title">CodersRank</span>
+                                <span class="social-subtitle">Developer ranking profile</span>
+                            </div>
+                            <i class="fas fa-chevron-right arrow-icon"></i>
+                        </a>
+
+                        <a href="https://brght.org/profile/tareq-mohammad-yousuf/" target="_blank" rel="noopener" class="social-card brght" id="link-brght">
+                            <div class="icon-circle">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="social-info">
+                                <span class="social-title">Brght Profile</span>
+                                <span class="social-subtitle">Cognitive skills & tests</span>
+                            </div>
+                            <i class="fas fa-chevron-right arrow-icon"></i>
+                        </a>
+
+                        <a href="https://github.com/tareqmy/" target="_blank" rel="noopener" class="social-card github" id="link-github">
+                            <div class="icon-circle">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="social-info">
+                                <span class="social-title">GitHub</span>
+                                <span class="social-subtitle">Open-source contributions</span>
+                            </div>
+                            <i class="fas fa-chevron-right arrow-icon"></i>
+                        </a>
+
+                        <a href="https://bitbucket.org/tareqmy/" target="_blank" rel="noopener" class="social-card bitbucket" id="link-bitbucket">
+                            <div class="icon-circle">
+                                <i class="fab fa-bitbucket"></i>
+                            </div>
+                            <div class="social-info">
+                                <span class="social-title">Bitbucket</span>
+                                <span class="social-subtitle">Git code repositories</span>
+                            </div>
+                            <i class="fas fa-chevron-right arrow-icon"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Dynamic Contact Cards -->
+                <section class="glass-panel" id="direct-contact-section">
+                    <h2 class="section-title">
+                        <i class="far fa-address-card"></i> Direct Contact
+                    </h2>
+                    
+                    <div class="contact-section-grid">
+                        <div class="contact-card" data-copy="tareq.y@gmail.com" data-copy-label="Email address copied!" id="contact-email" role="button" tabindex="0" title="Click to copy email address">
+                            <div class="icon-circle">
+                                <i class="far fa-envelope"></i>
+                            </div>
+                            <div class="social-info">
+                                <span class="social-title">Email Address</span>
+                                <span class="social-subtitle">tareq.y@gmail.com</span>
+                            </div>
+                            <i class="far fa-copy arrow-icon" title="Copy to clipboard"></i>
+                        </div>
+
+                        <div class="contact-card" data-copy="+8801713309963" data-copy-label="Phone number copied!" id="contact-phone" role="button" tabindex="0" title="Click to copy phone number">
+                            <div class="icon-circle">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="social-info">
+                                <span class="social-title">Phone Number</span>
+                                <span class="social-subtitle">+8801713309963</span>
+                            </div>
+                            <i class="far fa-copy arrow-icon" title="Copy to clipboard"></i>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Tareq Mohammad Yousuf. All rights reserved.</p>
+        </footer>
     </div>
-</div>
+
+    <!-- Application Controller Logic -->
+    <script src="app.js"></script>
 </body>
 </html>
