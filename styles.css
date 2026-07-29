@@ -784,6 +784,7 @@ h1.name {
 .social-card.brght { --brand-color: #ff007f; }
 .social-card.github { --brand-color: #24292e; }
 .social-card.bitbucket { --brand-color: #0052cc; }
+.social-card.cratesio { --brand-color: #e44d26; }
 
 /* Handle dark theme specific adjustments for Github logo brand color */
 html[data-theme="dark"] .social-card.github { --brand-color: #f3f4f6; }
