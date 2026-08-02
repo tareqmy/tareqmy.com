@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sirius Telefonix | Enterprise VoIP Platform</title>
+    <meta name="description" content="Case Study: Sirius Telefonix - A cloud-native enterprise communication stack." />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="shortcut icon" href="coding.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .case-study-main { display: flex; flex-direction: column; gap: 32px; width: 100%; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-secondary); text-decoration: none; font-weight: 600; margin-bottom: 24px; transition: color 0.3s ease; }
+        .back-link:hover { color: var(--accent-1); }
+        .hero-section { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 48px 24px; }
+        .tech-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 16px; }
+        .content-block { padding: 32px; }
+        .content-block h3 { color: var(--text-primary); font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .content-block p { line-height: 1.6; margin-bottom: 16px; font-size: 0.95rem; }
+        .content-block ul { margin-left: 24px; line-height: 1.6; font-size: 0.95rem; margin-bottom: 16px; }
+        .content-block li { margin-bottom: 8px; }
+        .cta-container { display: flex; justify-content: center; margin-top: 32px; }
+    </style>
+</head>
+<body>
+    <div class="glow-wrapper">
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+        <div class="ambient-glow glow-3"></div>
+    </div>
+
+    <div class="container">
+        <header class="theme-toggle-container" style="justify-content: space-between; align-items: center; margin-top: 20px;">
+            <a href="index.html" class="back-link" style="margin-bottom: 0;"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <main class="case-study-main">
+            <section class="glass-panel hero-section">
+                <div class="project-icon" style="width: 80px; height: 80px; font-size: 2.5rem; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; border-radius: 20px; background: var(--icon-circle-bg); border: 1px solid var(--icon-circle-border); color: var(--accent-1);">
+                    <i class="fas fa-phone-volume"></i>
+                </div>
+                <h1 class="name" style="margin-bottom: 0;"><span class="gradient-text">Sirius Telefonix</span></h1>
+                <p class="subtitle" style="font-size: 1.1rem; max-width: 600px; margin-bottom: 0;">Cloud-Native Enterprise VoIP & Communication Platform</p>
+                <div class="tech-tags">
+                    <span class="role-tag"><i class="fas fa-phone"></i> Asterisk</span>
+                    <span class="role-tag"><i class="fas fa-route"></i> OpenSIPS</span>
+                    <span class="role-tag"><i class="fab fa-java"></i> Spring Boot</span>
+                    <span class="role-tag"><i class="fab fa-react"></i> React / Angular</span>
+                    <span class="role-tag"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                    <span class="role-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+                </div>
+            </section>
+
+            <section class="glass-panel content-block">
+                <h3><i class="fas fa-project-diagram" style="color: var(--accent-1);"></i> Architecture Overview</h3>
+                <p>Sirius Telefonix is a highly scalable, private enterprise Voice over IP (VoIP) and communication suite. Designed to be fully cloud-native, it orchestrates complex telephony components alongside modern microservices using <strong>Kubernetes</strong> and <strong>Helm</strong>.</p>
+                <p>The system architecture strictly adheres to enterprise security and scaling best practices:</p>
+                <ul>
+                    <li><strong>Media Proxying:</strong> Asterisk RTP ports are never exposed directly to the internet. All external media proxying is handled securely through <em>RTPEngine</em>.</li>
+                    <li><strong>SIP Routing & SBC:</strong> <em>OpenSIPS</em> acts as the Session Border Controller and Load Balancer, efficiently managing SIP traffic routing.</li>
+                    <li><strong>API & Business Logic:</strong> The <em>Getafix API</em> (built with Spring Boot) powers the backend business logic and integrates natively with Asterisk (via AMI/ARI). The OpenSIPS Management Interface is kept strictly internal.</li>
+                    <li><strong>Modern UI:</strong> The <em>Cacofonix</em> frontend provides a responsive interface built with React/Angular.</li>
+                    <li><strong>Observability:</strong> Comprehensive monitoring is integrated via OpenTelemetry, SigNoz, and Prometheus to trace SIP traffic and application health in real-time.</li>
+                </ul>
+            </section>
+
+            <section class="glass-panel content-block" style="text-align: center; padding: 48px 32px;">
+                <div style="font-size: 3rem; color: var(--accent-1); margin-bottom: 20px;">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3 style="justify-content: center;">Private Enterprise Project</h3>
+                <p style="max-width: 600px; margin: 0 auto;">Due to the proprietary nature and security constraints of this enterprise platform, the source code repository is private and there is no public-facing production environment available for open access.</p>
+                
+                <div class="cta-container">
+                    <a href="mailto:tareq.y@gmail.com?subject=Demo%20Request:%20Sirius%20Telefonix" class="btn btn-primary" style="max-width: 300px; font-size: 1.1rem; padding: 18px 24px;">
+                        <i class="fas fa-envelope"></i> Request a Live Demo
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer style="text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 0.9rem;">
+            <p>&copy; 2026 Tareq Mohammad Yousuf. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
