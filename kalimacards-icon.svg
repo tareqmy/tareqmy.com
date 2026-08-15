@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="120 100 292 312" width="292" height="312">
+  <!-- KalimaCards mark: Arabic Kaf on a flashcard, with a gold spark of understanding -->
+  <defs>
+    <linearGradient id="kcBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4338ca"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="kcGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Back card (gold, tilted — the deck / flip motion) -->
+  <rect x="166" y="126" width="180" height="260" rx="30" fill="url(#kcGold)" transform="rotate(-12 256 256)"/>
+
+  <!-- Front card (indigo, glass edge) -->
+  <rect x="166" y="126" width="180" height="260" rx="30" fill="url(#kcBlue)"/>
+  <rect x="171" y="131" width="170" height="250" rx="26" fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="3"/>
+
+  <!-- Kaf (ك) -->
+  <path d="M320 176 C318 214 310 258 306 280 C304 294 296 302 282 302 L232 302 C216 302 207 292 205 274"
+        fill="none" stroke="#ffffff" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Spark (the kaf's inner mark, reimagined as a star) -->
+  <path d="M248 248 L274 229" fill="none" stroke="#ffffff" stroke-width="13" stroke-linecap="round"/>
+  <path d="M225 168 L230 179 L241 184 L230 189 L225 200 L220 189 L209 184 L220 179 Z" fill="url(#kcGold)"/>
+</svg>
