@@ -56,6 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Copy to Clipboard Helpers
     const copyButtons = document.querySelectorAll('[data-copy]');
     copyButtons.forEach(button => {
+        // Keyboard support for non-native buttons (e.g. contact cards with role="button"):
+        // native <button> elements already fire click on Enter/Space.
+        if (button.tagName !== 'BUTTON' && button.tagName !== 'A') {
+            button.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                    e.preventDefault();
+                    button.click();
+                }
+            });
+        }
+
         button.addEventListener('click', (e) => {
             e.preventDefault();
             const textToCopy = button.getAttribute('data-copy');

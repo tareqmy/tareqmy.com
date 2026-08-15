@@ -4,8 +4,7 @@
  * Drifting Background Glows, and Interactive 3D Card Dynamics.
  * -------------------------------------------------------- */
 
-/* Font Loading Imports */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Fonts are loaded via <link> tags in the HTML head (faster than a CSS @import waterfall). */
 
 /* Color Variables and Theme Setup */
 :root, html[data-theme="dark"] {
@@ -397,6 +396,13 @@ h1.name {
     font-weight: 500;
     color: var(--text-secondary);
     margin-bottom: 24px;
+}
+
+/* Short intro bio (replaces the redundant role list in the subtitle) */
+.subtitle.bio {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.65;
 }
 
 .divider {
@@ -950,5 +956,61 @@ footer {
     .contact-section-grid {
         grid-template-columns: 1fr;
         gap: 14px;
+    }
+}
+
+/* --------------------------------------------------------
+ * Accessibility & Performance Enhancements
+ * -------------------------------------------------------- */
+
+/* Visible keyboard focus states (mirrors the hover treatments) */
+a:focus-visible,
+button:focus-visible,
+.contact-card:focus-visible,
+[role="button"]:focus-visible {
+    outline: 2px solid var(--accent-1);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+.btn:focus-visible,
+.social-card:focus-visible,
+.project-card:focus-visible,
+.credential-card:focus-visible,
+.contact-card:focus-visible,
+#theme-toggle:focus-visible {
+    outline: 2px solid var(--accent-1);
+    outline-offset: 3px;
+    border-radius: inherit;
+}
+
+/* Respect users who prefer reduced motion: stop drifting glows,
+   the rotating avatar ring, breathing shadow, and status pulse. */
+@media (prefers-reduced-motion: reduce) {
+    .ambient-glow,
+    .avatar-ring,
+    .avatar-container::after,
+    .status-badge::after {
+        animation: none !important;
+    }
+
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* Lighter GPU load on small screens: freeze the glow drift and reduce
+   blur radii (visual look preserved, phones stay cool). */
+@media (max-width: 640px) {
+    .ambient-glow {
+        animation: none;
+        filter: blur(80px);
+    }
+
+    .glass-panel {
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
     }
 }

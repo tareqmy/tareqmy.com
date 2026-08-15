@@ -22,7 +22,27 @@
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content="Tareq Mohammad Yousuf | Portfolio & 4x AWS Certified Architect" />
     <meta property="twitter:description" content="Developer, Team Lead, DevOps, Architect & 4x AWS Certified Professional." />
-    
+    <meta property="twitter:image" content="https://www.gravatar.com/avatar/2f504664e5be99b5b3952c462d83af0d?s=400" />
+
+    <!-- Apply saved theme before first paint to avoid a flash of the wrong theme -->
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                if (t !== 'dark' && t !== 'light') {
+                    t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+                }
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) { /* keep default theme */ }
+        })();
+    </script>
+
+    <!-- Fonts (loaded via <link> instead of CSS @import for faster first paint) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
     <!-- Icons & Favicon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="shortcut icon" href="coding.png" />
@@ -86,7 +106,7 @@
                     <span class="gradient-text">Tareq Mohammad</span><br>Yousuf
                 </h1>
                 
-                <p class="subtitle">Developer | Team Lead | DevOps | Architect</p>
+                <p class="subtitle bio">Software engineer &amp; architect with 20+ years of experience building SaaS platforms, telephony systems, and cloud-native microservices on AWS and Kubernetes. Currently leading engineering teams at Vivasoft Limited.</p>
                 
                 <div class="roles-container">
                     <span class="role-tag"><i class="fas fa-code"></i> Developer</span>
@@ -111,6 +131,105 @@
             <!-- Right Column: Interactive Content Sections -->
             <div class="content-column">
                 
+                <!-- Selected Projects Section -->
+                <section class="glass-panel" id="featured-projects-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-laptop-code"></i> Selected Projects
+                    </h2>
+                    
+                    <div class="projects-grid">
+                        <a href="sirius-telefonix.html" class="project-card" id="project-sirius-telefonix">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-phone-volume"></i>
+                                </div>
+                                <div class="project-title-meta">
+                                    <h3 class="project-title">Sirius Telefonix</h3>
+                                    <span class="project-type"><i class="fas fa-lock" style="font-size: 0.8em; margin-right: 3px;"></i> Private Enterprise VoIP</span>
+                                </div>
+                            </div>
+                            <p class="project-desc">
+                                Cloud-native enterprise communication stack featuring Asterisk PBX, OpenSIPS SBC, and a Spring Boot API, orchestrated entirely on Kubernetes via Helm.
+                            </p>
+                            <div class="project-footer">
+                                View Case Study <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+
+                        <a href="https://munajatemaqbool.com/" target="_blank" rel="noopener" class="project-card" id="project-munajate-maqbool">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-hands-praying"></i>
+                                </div>
+                                <div class="project-title-meta">
+                                    <h3 class="project-title">Munajate Maqbool</h3>
+                                    <span class="project-type">Web App</span>
+                                </div>
+                            </div>
+                            <p class="project-desc">
+                                A clean, modern web application containing a curated collection of authentic Quranic & Prophetic supplications (Munajat), optimized for daily spiritual reflection.
+                            </p>
+                            <div class="project-footer">
+                                Visit Site <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+
+                        <a href="https://kalimacards.com/" target="_blank" rel="noopener" class="project-card" id="project-kalima-cards">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-book-quran"></i>
+                                </div>
+                                <div class="project-title-meta">
+                                    <h3 class="project-title">KalimaCards</h3>
+                                    <span class="project-type">Web App</span>
+                                </div>
+                            </div>
+                            <p class="project-desc">
+                                Master Quranic Arabic vocabulary through digital flashcards based on word frequency. Features active recall, progress tracking, and beautiful Quranic typography.
+                            </p>
+                            <div class="project-footer">
+                                Visit Site <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                        
+                        <a href="https://gitwig.dev/" target="_blank" rel="noopener" class="project-card" id="project-gitwig">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                                <div class="project-title-meta">
+                                    <h3 class="project-title">Gitwig</h3>
+                                    <span class="project-type">Rust CLI / TUI</span>
+                                </div>
+                            </div>
+                            <p class="project-desc">
+                                A lightweight, terminal-based Git user interface (TUI) written in Rust, providing a fast, minimal, keyboard-driven alternative for managing repository workflows.
+                            </p>
+                            <div class="project-footer">
+                                Visit Site <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/tareqmy/ferronote" target="_blank" rel="noopener" class="project-card" id="project-ferronote">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-sticky-note"></i>
+                                </div>
+                                <div class="project-title-meta">
+                                    <h3 class="project-title">Ferronote</h3>
+                                    <span class="project-type">Rust CLI / TUI</span>
+                                </div>
+                            </div>
+                            <p class="project-desc">
+                                Notes at the speed of thought — a fast, modeless terminal note-taking app written in Rust, featuring sub-millisecond fuzzy search, wiki links, and tag filtering.
+                            </p>
+                            <div class="project-footer">
+                                View GitHub <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
                 <!-- Professional Network Links -->
                 <section class="glass-panel" id="professional-networks-section">
                     <h2 class="section-title">
@@ -208,105 +327,6 @@
                     </div>
                 </section>
 
-                <!-- Personal Pet Projects Section -->
-                <section class="glass-panel" id="featured-projects-section">
-                    <h2 class="section-title">
-                        <i class="fas fa-laptop-code"></i> Personal Pet Projects
-                    </h2>
-                    
-                    <div class="projects-grid">
-                        <a href="sirius-telefonix.html" class="project-card" id="project-sirius-telefonix">
-                            <div class="project-header">
-                                <div class="project-icon">
-                                    <i class="fas fa-phone-volume"></i>
-                                </div>
-                                <div class="project-title-meta">
-                                    <h3 class="project-title">Sirius Telefonix</h3>
-                                    <span class="project-type"><i class="fas fa-lock" style="font-size: 0.8em; margin-right: 3px;"></i> Private Enterprise VoIP</span>
-                                </div>
-                            </div>
-                            <p class="project-desc">
-                                Cloud-native enterprise communication stack featuring Asterisk PBX, OpenSIPS SBC, and a Spring Boot API, orchestrated entirely on Kubernetes via Helm.
-                            </p>
-                            <div class="project-footer">
-                                View Case Study <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </a>
-
-                        <a href="https://munajatemaqbool.com/" target="_blank" rel="noopener" class="project-card" id="project-munajate-maqbool">
-                            <div class="project-header">
-                                <div class="project-icon">
-                                    <i class="fas fa-hands-praying"></i>
-                                </div>
-                                <div class="project-title-meta">
-                                    <h3 class="project-title">Munajate Maqbool</h3>
-                                    <span class="project-type">Web App</span>
-                                </div>
-                            </div>
-                            <p class="project-desc">
-                                A clean, modern web application containing a curated collection of authentic Quranic & Prophetic supplications (Munajat), optimized for daily spiritual reflection.
-                            </p>
-                            <div class="project-footer">
-                                Visit Site <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </a>
-
-                        <a href="https://kalimacards.com/" target="_blank" rel="noopener" class="project-card" id="project-kalima-cards">
-                            <div class="project-header">
-                                <div class="project-icon">
-                                    <i class="fas fa-book-quran"></i>
-                                </div>
-                                <div class="project-title-meta">
-                                    <h3 class="project-title">KalimaCards</h3>
-                                    <span class="project-type">Web App</span>
-                                </div>
-                            </div>
-                            <p class="project-desc">
-                                Master Quranic Arabic vocabulary through digital flashcards based on word frequency. Features active recall, progress tracking, and beautiful Quranic typography.
-                            </p>
-                            <div class="project-footer">
-                                Visit Site <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </a>
-                        
-                        <a href="https://gitwig.dev/" target="_blank" rel="noopener" class="project-card" id="project-gitwig">
-                            <div class="project-header">
-                                <div class="project-icon">
-                                    <i class="fab fa-git-alt"></i>
-                                </div>
-                                <div class="project-title-meta">
-                                    <h3 class="project-title">Gitwig</h3>
-                                    <span class="project-type">Rust CLI / TUI</span>
-                                </div>
-                            </div>
-                            <p class="project-desc">
-                                A lightweight, terminal-based Git user interface (TUI) written in Rust, providing a fast, minimal, keyboard-driven alternative for managing repository workflows.
-                            </p>
-                            <div class="project-footer">
-                                Visit Site <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </a>
-
-                        <a href="https://github.com/tareqmy/ferronote" target="_blank" rel="noopener" class="project-card" id="project-ferronote">
-                            <div class="project-header">
-                                <div class="project-icon">
-                                    <i class="fas fa-sticky-note"></i>
-                                </div>
-                                <div class="project-title-meta">
-                                    <h3 class="project-title">Ferronote</h3>
-                                    <span class="project-type">Rust CLI / TUI</span>
-                                </div>
-                            </div>
-                            <p class="project-desc">
-                                Notes at the speed of thought — a fast, modeless terminal note-taking app written in Rust, featuring sub-millisecond fuzzy search, wiki links, and tag filtering.
-                            </p>
-                            <div class="project-footer">
-                                View GitHub <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </a>
-                    </div>
-                </section>
-
                 <!-- AWS Certifications Grid -->
                 <section class="glass-panel" id="aws-certifications-section">
                     <h2 class="section-title">
@@ -314,26 +334,26 @@
                     </h2>
                     
                     <div class="credentials-grid">
-                        <a href="https://credly.com/users/tareqmy" target="_blank" rel="noopener" class="credential-card" id="cert-solutions-architect">
-                            <img src="aws-certified-solutions-architect-associate.png" alt="AWS Certified Solutions Architect – Associate" class="badge-img" />
+                        <a href="https://www.credly.com/badges/c0343005-60b8-40bc-bada-4d23714481b6" target="_blank" rel="noopener" class="credential-card" id="cert-solutions-architect">
+                            <img src="aws-certified-solutions-architect-associate.png" alt="AWS Certified Solutions Architect – Associate" class="badge-img" width="96" height="96" loading="lazy" />
                             <h3 class="badge-name">Solutions Architect</h3>
                             <span class="badge-issuer">Associate</span>
                         </a>
                         
-                        <a href="https://credly.com/users/tareqmy" target="_blank" rel="noopener" class="credential-card" id="cert-sysops-admin">
-                            <img src="aws-certified-sysops-administrator-associate.png" alt="AWS Certified SysOps Administrator – Associate" class="badge-img" />
+                        <a href="https://www.credly.com/badges/0fb76ff9-97f2-4bc0-8147-5731b56ffc84" target="_blank" rel="noopener" class="credential-card" id="cert-sysops-admin">
+                            <img src="aws-certified-sysops-administrator-associate.png" alt="AWS Certified SysOps Administrator – Associate" class="badge-img" width="96" height="96" loading="lazy" />
                             <h3 class="badge-name">SysOps Administrator</h3>
                             <span class="badge-issuer">Associate</span>
                         </a>
                         
-                        <a href="https://credly.com/users/tareqmy" target="_blank" rel="noopener" class="credential-card" id="cert-developer-associate">
-                            <img src="aws-certified-developer-associate.png" alt="AWS Certified Developer – Associate" class="badge-img" />
+                        <a href="https://www.credly.com/badges/a85f3fe5-0295-4185-b69c-7f0292c333d6" target="_blank" rel="noopener" class="credential-card" id="cert-developer-associate">
+                            <img src="aws-certified-developer-associate.png" alt="AWS Certified Developer – Associate" class="badge-img" width="96" height="96" loading="lazy" />
                             <h3 class="badge-name">Developer</h3>
                             <span class="badge-issuer">Associate</span>
                         </a>
                         
-                        <a href="https://credly.com/users/tareqmy" target="_blank" rel="noopener" class="credential-card" id="cert-cloud-practitioner">
-                            <img src="aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner" class="badge-img" />
+                        <a href="https://www.credly.com/badges/5c3e0643-6c3d-40da-bdf0-f4c160cc1a69" target="_blank" rel="noopener" class="credential-card" id="cert-cloud-practitioner">
+                            <img src="aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner" class="badge-img" width="96" height="96" loading="lazy" />
                             <h3 class="badge-name">Cloud Practitioner</h3>
                             <span class="badge-issuer">Foundational</span>
                         </a>
