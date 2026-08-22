@@ -1030,7 +1030,7 @@ button:focus-visible,
     padding: 7px;
 }
 
-/* Theme-aware logo variants (Gitwig ships light/dark marks) */
+/* Theme-aware logo variants (Sirius and KalimaCards ship light/dark marks) */
 html[data-theme="dark"] .logo-on-light { display: none; }
 html[data-theme="light"] .logo-on-dark { display: none; }
 
@@ -1042,11 +1042,12 @@ html[data-theme="light"] .logo-on-dark { display: none; }
 
 #project-sirius-telefonix  { --project-color: #c67139; } /* Sirius copper */
 #project-munajate-maqbool  { --project-color: #2d6a4f; } /* Munajat emerald */
-#project-kalima-cards      { --project-color: #6366f1; } /* KalimaCards indigo */
-#project-gitwig            { --project-color: #2fa872; } /* Gitwig green */
+#project-kalima-cards      { --project-color: #D98A2B; } /* KalimaCards amber (light-bg variant) */
+#project-gitwig            { --project-color: #4db08a; } /* Gitwig verdigris */
 #project-ferronote         { --project-color: #e24e1b; } /* Ferronote orange */
 
 html[data-theme="dark"] #project-munajate-maqbool { --project-color: #52a37e; } /* brighter emerald on dark */
+html[data-theme="dark"] #project-kalima-cards     { --project-color: #FFAE52; } /* brand amber on dark */
 
 .project-card {
     --project-color: var(--accent-1); /* fallback */
