@@ -1044,9 +1044,11 @@ html[data-theme="light"] .logo-on-dark { display: none; }
 #project-kalima-cards      { --project-color: #D98A2B; } /* KalimaCards amber (light-bg variant) */
 #project-gitwig            { --project-color: #4db08a; } /* Gitwig verdigris */
 #project-ferronote         { --project-color: #e24e1b; } /* Ferronote orange */
+#project-sipr              { --project-color: #b7410e; } /* sipr rust */
 
 html[data-theme="dark"] #project-munajate-maqbool { --project-color: #52a37e; } /* brighter emerald on dark */
 html[data-theme="dark"] #project-kalima-cards     { --project-color: #FFAE52; } /* brand amber on dark */
+html[data-theme="dark"] #project-sipr             { --project-color: #d65319; } /* brighter rust on dark */
 
 .project-card {
     --project-color: var(--accent-1); /* fallback */
